@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="..\packages\NUnit.3.11.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{96786EC7-671E-470E-B04F-F959CBA28F8E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SCDemo.UnitTests</RootNamespace>
+    <AssemblyName>SCDemo.UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ATF.Repository, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\ATF.Repository.1.2.4\lib\net472\ATF.Repository.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc">
+      <HintPath>..\packages\Castle.Core.4.4.0\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+      <HintPath>..\packages\Common.Logging.3.4.1\lib\net40\Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+      <HintPath>..\packages\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.3.3.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7">
+      <HintPath>..\packages\Ninject.3.3.3\lib\net45\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NSubstitute, Version=3.1.0.0, Culture=neutral, PublicKeyToken=92dd2e9066daa5ca">
+      <HintPath>..\packages\NSubstitute.3.1.0\lib\net46\NSubstitute.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.11.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb">
+      <HintPath>..\packages\NUnit.3.11.0\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Quartz, Version=3.0.9.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Quartz.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.1\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Terrasoft.Common, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.Core, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.Core.ConfigurationBuild, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.Core.ConfigurationBuild.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.Core.DI, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.Core.DI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.Core.Packages, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.Core.Packages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.Core.Process, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.Core.Process.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.Core.Scheduler, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.Core.Scheduler.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.Core.ScriptEngine, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.Core.ScriptEngine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.Core.Translation, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.Core.Translation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.GlobalSearch, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.GlobalSearch.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.GoogleServerConnector, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.GoogleServerConnector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.IO, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.IO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.Messaging.Common.Standard, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.Messaging.Common.Standard.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.Mobile, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.Mobile.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.Monitoring, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.Monitoring.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.Nui, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.Nui.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.Nui.ServiceModel, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.Nui.ServiceModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.Reports, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.Reports.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.Services, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.Services.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.Social, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.Social.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.TestFramework, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioTestFramework.7.16.0.4461\lib\net40\Terrasoft.TestFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.Web.Common, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.Web.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Terrasoft.Web.Http.Abstractions, Version=7.16.0.4461, Culture=neutral, PublicKeyToken=edaadfbc3b0bb879">
+      <HintPath>..\packages\CreatioSDK.7.16.0.4461\lib\net40\Terrasoft.Web.Http.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="UnitTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\CreatioMock.7.16.0.4463\lib\net472\UnitTest.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContactReporterEngineTests.cs" />
+    <Compile Include="ContactReporterRepositoryTests.cs" />
+    <Compile Include="ESQContactReporterTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="nunit.engine.api.dll" />
+    <None Include="nunit.engine.dll" />
+    <None Include="NUnit3.TestAdapter.dll" />
+    <None Include="NUnit3.TestAdapter.pdb" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SCDemo.Api\SCDemo.Api.csproj">
+      <Project>{2b66609c-54b4-4308-ad6b-d1d014d68407}</Project>
+      <Name>SCDemo.Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCDemo.csproj">
+      <Project>{a0cf361f-220c-4003-939f-77900cc51d2a}</Project>
+      <Name>SCDemo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.11.0\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+		 Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

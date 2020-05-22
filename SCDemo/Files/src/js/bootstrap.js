@@ -1,0 +1,1 @@
+window.MyLibrary = {version: "0.1"}

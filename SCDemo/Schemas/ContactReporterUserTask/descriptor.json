@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "083b8f96-3cdf-458c-bf8e-b6b32d12ca89",
+    "Name": "ContactReporterUserTask",
+    "ModifiedOnUtc": "\/Date(1590082160000)\/",
+    "ManagerName": "ProcessUserTaskSchemaManager",
+    "Caption": "ContactReporterUserTask"
+  }
+}

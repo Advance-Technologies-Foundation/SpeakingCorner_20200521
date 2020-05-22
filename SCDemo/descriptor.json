@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "a0cf361f-220c-4003-939f-77900cc51d2a",
+    "PackageVersion": "7.8.0",
+    "Name": "SCDemo",
+    "ModifiedOnUtc": "\/Date(1590059924000)\/",
+    "Maintainer": "Terrasoft",
+    "DependsOn": []
+  }
+}
